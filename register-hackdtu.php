@@ -38,15 +38,13 @@
   $question = mysqli_real_escape_string($connection, $_POST["question"]);
 
   if(isset($_POST["submit"]) && $res['success']){ //table name goes down here
-    $query = "INSERT INTO table_name (name, email, phone, github1, institute, team, member2, github2, member3, github3, member4, github4, question) VALUES ('$name', '$email', '$phone', '$github1', '$institute', '$team', '$member2', '$github2, '$member3','$github3', '$member4', '$github4', '$question')";
+    $query = "INSERT INTO teams (name, email, phone, github1, institute, team, member2, github2, member3, github3, member4, github4, question) VALUES ('$name', '$email', '$phone', '$github1', '$institute', '$team', '$member2', '$github2, '$member3','$github3', '$member4', '$github4', '$question')";
     $result = mysqli_query($connection, $query);
-    if(!result){
+    if(!$result){
       die("ERROR".mysqli_error($connection));
     }
+    mysqli_close($connection);
+    header("Location: index.html");
   }
-  else{
-    echo "Try again";
-  }
-  mysqli_close($connection);
-  header("Location: index.html");
+  
 ?>

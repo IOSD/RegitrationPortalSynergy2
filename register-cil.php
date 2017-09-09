@@ -34,10 +34,15 @@
   if(isset($_POST["submit"]) && $res['success']){ 
     $query = "INSERT INTO participants (name, email, phone, institute, , codechef, topcoder, hackerrank) VALUES ('$name', '$email', '$phone', '$institute', '$codechef', '$topcoder', '$hackerrank')";
     $result = mysqli_query($connection, $query);
-    if(!result){
+    if(!$result){
       die("ERROR".mysqli_error($connection));
     }
+    mysqli_close($connection);
+    header("Location: index.html");
   }
-  mysqli_close($connection);
-  header("Location: index.html");
+  
+  else{
+    echo "Try again";
+  }
+  
 ?>
