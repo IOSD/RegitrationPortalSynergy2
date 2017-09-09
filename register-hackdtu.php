@@ -5,6 +5,14 @@
   DEFINE("DB_PASSWORD", "");
   DEFINE("DB_NAME", "");
 
+  $google_url="https://www.google.com/recaptcha/api/siteverify";
+  $secret='6LcHGy8UAAAAAIEmWOTgQooKsHkGKbysHrKyDbIr';
+  $recaptcha=$_POST['g-recaptcha-response'];
+  $ip=$_SERVER['REMOTE_ADDR'];
+  $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+  $res=file_get_contents($url);
+  $res= json_decode($res, true);
+
   $connection = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD);
   if(!$connection){
     die(mysqli_error($connection));
@@ -29,12 +37,15 @@
   $github4 = mysqli_real_escape_string($connection, $_POST["github4"]);
   $question = mysqli_real_escape_string($connection, $_POST["question"]);
 
-  if(isset($_POST["submit"])){ //table name goes down here
+  if(isset($_POST["submit"]) && $res['success']){ //table name goes down here
     $query = "INSERT INTO table_name (name, email, phone, github1, institute, team, member2, github2, member3, github3, member4, github4, question) VALUES ('$name', '$email', '$phone', '$github1', '$institute', '$team', '$member2', '$github2, '$member3','$github3', '$member4', '$github4', '$question')";
     $result = mysqli_query($connection, $query);
     if(!result){
       die("ERROR".mysqli_error($connection));
     }
+  }
+  else{
+    echo "Try again";
   }
   mysqli_close($connection);
   header("Location: index.html");

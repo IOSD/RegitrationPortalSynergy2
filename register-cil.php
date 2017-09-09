@@ -5,6 +5,14 @@
   DEFINE("DB_PASSWORD", "");
   DEFINE("DB_NAME", "");
 
+  $google_url="https://www.google.com/recaptcha/api/siteverify";
+  $secret='6LcHGy8UAAAAAIEmWOTgQooKsHkGKbysHrKyDbIr';
+  $recaptcha=$_POST['g-recaptcha-response'];
+  $ip=$_SERVER['REMOTE_ADDR'];
+  $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+  $res=file_get_contents($url);
+  $res= json_decode($res, true);
+
   $connection = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD);
   if(!$connection){
     die(mysqli_error($connection));
@@ -23,8 +31,8 @@
   $topcoder = mysqli_real_escape_string($connection, $_POST["topcoder"]);
   $hackerrank = mysqli_real_escape_string($connection, $_POST["hackerrank"]);
 
-  if(isset($_POST["submit"])){ //table name goes down here
-    $query = "INSERT INTO table_name (name, email, phone, institute, , codechef, topcoder, hackerrank) VALUES ('$name', '$email', '$phone', '$institute', '$codechef', '$topcoder', '$hackerrank')";
+  if(isset($_POST["submit"]) && $res['success']){ 
+    $query = "INSERT INTO participants (name, email, phone, institute, , codechef, topcoder, hackerrank) VALUES ('$name', '$email', '$phone', '$institute', '$codechef', '$topcoder', '$hackerrank')";
     $result = mysqli_query($connection, $query);
     if(!result){
       die("ERROR".mysqli_error($connection));

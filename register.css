@@ -6,42 +6,22 @@ html, body {
     margin: 0;
     font-size: 30px;
     overflow-x: hidden;
+    color: #f3f6fb !important;
 }
 body{
     background-color: #f3f6fb !important;
-    transform-style: preserve-3d;
-    display: flex;
 }
-.text{
-    color: #705353;
-    transform-style: preserve-3d;
-    border-radius: 50%;
-    margin: 0 auto;
+.header, .footer {
+    background-color:rgb(70, 85, 109);
 }
-.title{
-    transform: translateZ(0px);
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    padding: 30px;
-    margin: auto;
-    padding-top: 30vh;
+.header{
+	padding: 30px;
+}
+img {
+    width: 300px;
 }
 
-header {
-	padding-top: 15vh;
-    position: absolute;
-    background-image: linear-gradient(45deg, rgba(100, 132, 132, 0.8) 0%, rgba(150, 111, 130, 0.8) 100%);
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-#logo  {
-    width: 50vh;
-    padding: 20px;
-}
-
-h1,h2,h4,a {
+h1,h2 ,h3,h4{
 	font-size: 9vh !important;
 	font-family: 'Anton', sans-serif !important;
     transform-style: preserve-3d;
@@ -50,24 +30,43 @@ h1,h2,h4,a {
 h2{
 	font-size: 50px !important;
 }
+h3{
+	font-size: 30px !important;
+
+}
+h4{
+	font-size: 20px !important;
+}
 
 a{
-	font-size: 10px !important;
+	font-size: 20px !important;
+	color:  #fff !important;
 }
 
 .signup-form{
-	margin-top: 200px;
+	margin: 100px;
+	margin-bottom: 10px;
+	border-top: 20px solid #46556d;
 }
 
 .input-group > input{
 	padding: 20px;
 	border: none;
 	border-radius: 0;
-	border-left: 20px solid #705353;
-	border-right: 20px solid #705353;
+	border-left: 20px solid #46556d;
+	border-right: 20px solid #46556d;
 
 }
 
 input[type="textarea"]{
 	width: 100%;
+}
+input[type="submit"]{
+	color: white;
+	padding-bottom: 40px;
+    background-color:rgb(70, 85, 109);
+}
+
+.g-recaptcha{
+	margin: 30px;
 }
