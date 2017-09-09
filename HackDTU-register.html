@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register-HackDTU</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="register.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <link href="https://use.fontawesome.com/4687d61c54.css" media="all" rel="stylesheet">
+</head>
+<body>
+    <div class="row top">
+        <div class="col-lg-12 text-center header">
+            <h1>SYNERGY 2.0</h1>
+            <h4>Empowering Innovation | Delhi Technological University</h4>
+            <h2>HACKDTU</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-md-12">
+            <form class="signup-form" action="register-hackdtu.php" validate method="POST" >
+                <div class="input-group">
+                    <input class="form-control" type="text" name="name" value="" placeholder="Full Name" required />
+                    <input class="form-control" type="email" name="email" value="" placeholder="Email" required />
+                    <input class="form-control" type="tel" name="phone" value="" placeholder="Phone Number" required />
+                    <input class="form-control" type="text" name="github1" value="" placeholder="GitHub Profile Link" required />
+                    <input class="form-control" type="text" name="institute" value="" placeholder="Name of institute" />
+                    <input class="form-control" type="text" name="team" value="" placeholder="Team name" required />
+                    <input class="form-control" type="text" name="member2" value="" placeholder="Member Name"  />
+                    <input class="form-control" type="text" name="github2" value="" placeholder="GitHub Profile Link"  />
+                    <input class="form-control" type="text" name="member3" value="" placeholder="Member Name" />
+                    <input class="form-control" type="text" name="github3" value="" placeholder="GitHub Profile Link"  />
+                    <input class="form-control" type="text" name="member4" value="" placeholder="Member Name"  />
+                    <input class="form-control" type="text" name="github4" value="" placeholder="GitHub Profile Link"  />
+                    <input type="textarea" name="question" required="" placeholder="Why should you be chosen over other teams?" />
+                
+                </div>
+                    <div class="g-recaptcha" data-sitekey="6LcHGy8UAAAAAP8RNKrU86aIGf4FvE2aAZXnqcjg"></div>
+                    <input class="form-control" type="submit" name="submit" value="SUBMIT">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12 text-center footer">
+            <img src="logo.png">
+            <h4>Delhi Technological University</h4>
+            <a href="https://www.facebook.com/iosddtu/" target="blank" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/iosoftwared" target="blank" ><i class="fa fa-twitter"  aria-hidden="true"></i></a>
+            <a href="https://github.com/IOSD" target="blank" ><i class="fa fa-github"  aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/iosdofficial/" target="blank" ><i class="fa fa-instagram"  aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/iosd?trk=ppro_cprof" target="blank" ><i class="fa fa-linkedin"  aria-hidden="true"></i></a>
+            <a href="mailto: contact@iosd.tech"> <i class="fa fa-envelope"  aria-hidden="true"></i></a>
+    </div>
+    </div>
+    <script type="text/javascript">
+        var card = $(".title");
+        $(document).on("mousemove",function(e) {  
+          var ax = -($(window).innerWidth()/2- e.pageX)/30;
+          var ay = ($(window).innerHeight()/2- e.pageY)/30;
+          card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+        });
+    </script>
+</body>
+</html>
