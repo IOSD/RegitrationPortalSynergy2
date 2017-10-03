@@ -1,9 +1,9 @@
 <?php
   //Database details
-  DEFINE("DB_SERVER", "");
-  DEFINE("DB_USER", "");
-  DEFINE("DB_PASSWORD", "");
-  DEFINE("DB_NAME", "");
+  DEFINE("DB_SERVER", "localhost");
+  DEFINE("DB_USER", "iosdtxwo");
+  DEFINE("DB_PASSWORD", "Hackathon@@11");
+  DEFINE("DB_NAME", "iosdtxwo_hack");
 
   $google_url="https://www.google.com/recaptcha/api/siteverify";
   $secret='6LcHGy8UAAAAAIEmWOTgQooKsHkGKbysHrKyDbIr';
@@ -38,13 +38,13 @@
   $question = mysqli_real_escape_string($connection, $_POST["question"]);
 
   if(isset($_POST["submit"]) && $res['success']){ //table name goes down here
-    $query = "INSERT INTO teams (name, email, phone, github1, institute, team, member2, github2, member3, github3, member4, github4, question) VALUES ('$name', '$email', '$phone', '$github1', '$institute', '$team', '$member2', '$github2, '$member3','$github3', '$member4', '$github4', '$question')";
+    $query = "INSERT INTO teams (name, email, phone, github1, institute, team, member2, github2, member3, github3, member4, github4, question) VALUES ('$name', '$email', '$phone', '$github1', '$institute', '$team', '$member2', '$github2', '$member3','$github3', '$member4', '$github4', '$question')";
     $result = mysqli_query($connection, $query);
     if(!$result){
       die("ERROR".mysqli_error($connection));
     }
     mysqli_close($connection);
-    header("Location: index.html");
+    header("Location: index2.html");
   }
   
 ?>

@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Source+Sans+Pro:200,300,400,600,700');
 html, body {
 	width: 100%;
 	height: 100%;
     padding: 0;
     margin: 0;
 	overflow: hidden;
-    background-image: url("bg.jpg");
+    background-image: url("bg2.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-size: 30px;
-    color: #fff !important;
+    color: #DAECF3 !important;
 }
 
 #left, #right, #top, #bottom{
@@ -55,7 +56,7 @@ html, body {
 	.border{
 		opacity: 0;
 	}
-	h1{
+	.reg_test{
 		font-size: 5vh !important;
 	}
 }
@@ -63,8 +64,6 @@ html, body {
 header {
 	padding-top: 15vh;
     position: absolute;
-    background-color: rgba(100, 132, 132, 0.8);
-    background-image: linear-gradient(45deg, rgba(100, 132, 132, 0.8) 0%, rgba(150, 111, 130, 0.8) 100%);
     height: 100%;
     width: 100%;
     margin: 0;
@@ -75,40 +74,49 @@ header {
     padding: 20px;
 }
 
-h1 {
-	font-size: 9vh !important;
-	font-family: 'Anton', sans-serif !important;
+.reg_test {
+	font-size: 7.5vh !important;
+	font-family: 'Lato', sans-serif !important;
+	font-weight: 900 !important;
+	color: #fff !important;
 }
 
 h2 {
-	font-size: 7vh !important;
-	font-family: 'Anton', sans-serif !important;
+	font-size: 6vh !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
 	font-weight: bold;
 }
 
 .heading{
- 	background:  linear-gradient(to right, #ddb8bc, #9d8aa0, #79769b);
+ 	background:  #012D41;
  	opacity: 0.9;
  	width: auto;
  	padding: 20px;
 }
 
 .link{
-	background-color: #535070;
+	background-color: #FF404E;
 }
 
 a {
-    color: rgba(255, 255, 255, 0.7) !important;
-    font-family: 'Open Sans Condensed', sans-serif;
+    color: #DAECF3 !important;
+    font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
-    font-size: 4vh;
+    font-size: 3.5vh;
+		font-weight: 200 !important;
 }
 
 a:hover{
 	color: rgba(255, 255, 255, 1) !important;
-	text-decoration: none !important;	
+	text-decoration: none !important;
 }
 
 .input-group {
-	display: table-row; 
+	display: table-row;
+}
+
+.shadow{
+	-webkit-box-shadow: 14px 9px 18px 0px rgba(0,0,0,0.21);
+	-moz-box-shadow: 14px 9px 18px 0px rgba(0,0,0,0.21);
+	box-shadow: 14px 9px 18px 0px rgba(0,0,0,0.21);
 }
