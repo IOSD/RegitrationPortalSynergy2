@@ -120,3 +120,17 @@ a:hover{
 	-moz-box-shadow: 14px 9px 18px 0px rgba(0,0,0,0.21);
 	box-shadow: 14px 9px 18px 0px rgba(0,0,0,0.21);
 }
+.modal-header{
+	border: 0;
+}
+.modal-content{
+	background-color: #DAECF3;
+	color: #012D41;
+	margin: auto;
+	border: 1px solid #FF404E;
+}
+.modal-content p{
+    font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	padding: 20px 30px 30px 30px;
+}

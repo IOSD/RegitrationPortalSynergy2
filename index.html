@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -42,13 +43,26 @@
 		            <div class="link"  style=" padding:30px 0px 30px 0px;">
 		                <a target="_blank"href="https://in.explara.com/e/internship-fair-dtu" >Internship Fair &#8226; </a>
 		                <a href="CIL-register.html">Code In Less &#8226; </a>
-		                <a href="HackDTU-register.html">HackDTU</a>
+		                <a data-toggle="modal" href="#myModal">HackDTU</a>
 		            </div>
 		        </div>
 
 					</div>
 				</div>
+		<div id="myModal" class="modal" role="dialog">
+			  <div class="modal-dialog">
 
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+			      <div class="modal-body">
+			        <p>Registrations have closed for HackDTU</p>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4 text-center">
                 <img id="logo" src="iosd-white.png" class="iosd_logo">
